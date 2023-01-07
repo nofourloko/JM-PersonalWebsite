@@ -35,6 +35,12 @@ export default function Portfolio({page}) {
     }else 
       setCurrentProject(prevValue => prevValue + 1)
   }
+  const prevProject = () => {
+    if(currentProject === 0){
+      setCurrentProject(projects.length - 1)
+    }else 
+      setCurrentProject(prevValue => prevValue - 1)
+  }
   return (
     <div className='PortfolioContainer'>
       <Header />
@@ -44,6 +50,7 @@ export default function Portfolio({page}) {
         <div className='PortfolioImageContainer'>
           <img 
             src={back}
+            onClick = {prevProject}  
           />
           <div>
         {!displayInfo ?
