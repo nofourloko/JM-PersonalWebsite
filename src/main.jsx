@@ -6,10 +6,10 @@ import NewPage from './Context/newPage'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <NewPage>
-      <Router>
+    <Router>
+      <NewPage>
         <App />
-      </Router>
-    </NewPage>
+      </NewPage>
+    </Router>
   </React.StrictMode>,
 )
